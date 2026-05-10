@@ -2,6 +2,7 @@
   "name": "workflowpilot-ai",
   "version": "1.8.2",
   "private": true,
+  "packageManager": "pnpm@10.24.0",
   "author": "WorkflowPilot AI",
   "homepage": "https://your-domain.com",
   "repository": {
