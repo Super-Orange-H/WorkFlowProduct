@@ -1,0 +1,127 @@
+{
+  "metadata": {
+    "title": "AI n8n Workflow Generator",
+    "description": "Turn a plain-language automation idea into an importable n8n workflow JSON."
+  },
+  "page": {
+    "title": "Natural language to n8n workflow JSON",
+    "highlight": "n8n workflow",
+    "description": "Describe the automation you want. The AI designs the trigger, nodes, branches, setup notes, and an import-ready workflow JSON for n8n.",
+    "tip": "Built for founders, operators, marketers, and support teams who want automation without wiring every node by hand.",
+    "primaryButton": "Generate workflow",
+    "secondaryButton": "n8n import docs"
+  },
+  "generator": {
+    "title": "n8n workflow generator",
+    "form": {
+      "title": "Workflow brief",
+      "description": "Automation description",
+      "descriptionPlaceholder": "Example: When a Typeform lead arrives with name, email, company, and budget, qualify it, save it to Google Sheets, notify Slack if it is high intent, and send a personalized follow-up email.",
+      "examplesLabel": "Quick starts",
+      "trigger": "Trigger",
+      "complexity": "Build level",
+      "tone": "Scenario",
+      "integrations": "Tools to connect",
+      "integrationsPlaceholder": "For example: Slack, Google Sheets, Gmail, Webhook",
+      "integrationsHelp": "List the apps, databases, forms, APIs, or channels this workflow should connect. Leave it blank if you want AI to infer them from your description.",
+      "schedule": "Schedule",
+      "schedulePlaceholder": "Every weekday at 9:00, or leave blank",
+      "dataShape": "Input fields",
+      "dataShapePlaceholder": "Name, email, company, budget, message...",
+      "timezone": "Timezone",
+      "errorHandling": "Error handling",
+      "stickyNotes": "Sticky notes",
+      "generate": "Generate importable JSON",
+      "generateWithCredits": "Generate workflow ({credits} credits)",
+      "signInToGenerate": "Sign in and generate workflow",
+      "generating": "Generating workflow"
+    },
+    "status": {
+      "fast": {
+        "title": "One prompt, full package",
+        "description": "Workflow JSON, setup notes, credentials, and tests."
+      },
+      "credits": {
+        "signedOut": "{cost} credits per generation",
+        "signedIn": "{credits} credits left · {cost} per generation",
+        "description": "Sign in to save history and manage usage.",
+        "insufficient": "You do not have enough credits for the next generation.",
+        "topUp": "Top up"
+      },
+      "safe": {
+        "title": "Credential-safe",
+        "description": "Secrets stay out of generated workflows."
+      }
+    },
+    "options": {
+      "trigger": {
+        "auto": "Infer",
+        "manual": "Manual",
+        "webhook": "Webhook",
+        "schedule": "Schedule",
+        "form": "Form",
+        "email": "Email",
+        "appEvent": "App event"
+      },
+      "complexity": {
+        "simple": "Simple",
+        "standard": "Standard",
+        "production": "Production"
+      },
+      "tone": {
+        "general": "General",
+        "business": "Business",
+        "ops": "Operations",
+        "marketing": "Marketing",
+        "support": "Support",
+        "technical": "Technical"
+      }
+    },
+    "examples": {
+      "lead": {
+        "title": "CRM customer sync",
+        "prompt": "Listen for newly added customers in the CRM, automatically capture customer name, contact information, source, and follow-up status, then sync the data to the internal ledger spreadsheet."
+      },
+      "support": {
+        "title": "Complaint priority triage",
+        "prompt": "Receive customer message data from external channels, use AI to assess the content, and immediately push high-priority complaint messages to a human agent for handling."
+      },
+      "content": {
+        "title": "Contract expiry alert",
+        "prompt": "Read an online contract spreadsheet every morning at 8:00, scan all rows, filter contracts expiring within the next 7 days, and push reminders to the responsible owners."
+      }
+    },
+    "result": {
+      "title": "Generated workflow",
+      "empty": "Your generated workflow JSON, setup notes, credential checklist, and test plan will appear here.",
+      "copy": "Copy JSON",
+      "download": "Download JSON",
+      "warnings": "Warnings",
+      "setup": "Setup steps",
+      "assumptions": "Assumptions",
+      "credentials": "Credentials to connect",
+      "testPlan": "Test plan",
+      "noSetup": "No setup steps returned.",
+      "noAssumptions": "No assumptions returned.",
+      "noCredentials": "No external credentials were reported.",
+      "noTestPlan": "No test plan returned.",
+      "tabs": {
+        "setup": "Setup",
+        "credentials": "Credentials",
+        "test": "Test",
+        "json": "JSON"
+      }
+    },
+    "history": {
+      "title": "Recent workflows",
+      "empty": "Your saved workflows will appear here after generation."
+    },
+    "toast": {
+      "success": "Workflow generated.",
+      "error": "Generation failed.",
+      "copied": "Workflow JSON copied.",
+      "loaded": "Workflow loaded.",
+      "insufficientCredits": "Insufficient credits. Please top up to keep generating."
+    }
+  }
+}

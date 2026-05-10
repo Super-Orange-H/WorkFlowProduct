@@ -471,6 +471,42 @@ export const aiTask = table(
   ]
 );
 
+export const n8nWorkflow = table(
+  'n8n_workflow',
+  {
+    id: varchar191('id').primaryKey(),
+    userId: varchar191('user_id')
+      .notNull()
+      .references(() => user.id, { onDelete: 'cascade' }),
+    title: varchar('title', { length: 255 }).notNull().default(''),
+    description: longtext('description').notNull(),
+    trigger: varchar('trigger', { length: 50 }).notNull().default('auto'),
+    tone: varchar('tone', { length: 50 }).notNull().default('general'),
+    complexity: varchar('complexity', { length: 50 })
+      .notNull()
+      .default('standard'),
+    integrations: longtext('integrations'),
+    input: longtext('input'),
+    workflow: longtext('workflow').notNull(),
+    summary: longtext('summary'),
+    assumptions: longtext('assumptions'),
+    missingCredentials: longtext('missing_credentials'),
+    setup: longtext('setup'),
+    testPlan: longtext('test_plan'),
+    warnings: longtext('warnings'),
+    costCredits: int('cost_credits').notNull().default(0),
+    creditId: varchar191('credit_id'),
+    status: varchar('status', { length: 50 }).notNull().default('created'),
+    createdAt: timestamp('created_at').defaultNow().notNull(),
+    updatedAt: timestamp('updated_at').defaultNow().onUpdateNow().notNull(),
+    deletedAt: timestamp('deleted_at'),
+  },
+  (table) => [
+    index('idx_n8n_workflow_user_created').on(table.userId, table.createdAt),
+    index('idx_n8n_workflow_user_status').on(table.userId, table.status),
+  ]
+);
+
 export const chat = table(
   'chat',
   {

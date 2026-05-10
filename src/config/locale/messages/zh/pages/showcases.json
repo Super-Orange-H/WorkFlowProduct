@@ -1,14 +1,14 @@
 {
   "metadata": {
     "title": "案例展示",
-    "description": "用 ShipAny 打造的精彩项目"
+    "description": "用 WorkflowPilot AI 打造的精彩项目"
   },
   "page": {
     "title": "案例展示",
     "sections": {
       "showcases": {
         "id": "showcases",
-        "title": "用 ShipAny 构建的 AI SaaS 创业项目",
+        "title": "用 WorkflowPilot AI 构建的 AI SaaS 创业项目",
         "description": "简单、快速、高效。",
         "groups": [
           {

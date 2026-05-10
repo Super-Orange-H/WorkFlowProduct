@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">WorkflowPilot AI logo</title>
+  <desc id="desc">A workflow route forming a pilot P mark with connected automation nodes.</desc>
+  <defs>
+    <linearGradient id="route" x1="214" x2="832" y1="802" y2="166" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff7a3d"/>
+      <stop offset=".52" stop-color="#f04a79"/>
+      <stop offset="1" stop-color="#e6335f"/>
+    </linearGradient>
+    <linearGradient id="node" x1="256" x2="810" y1="220" y2="806" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff7f9"/>
+      <stop offset="1" stop-color="#ffe1e8"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="12%" y="10%" width="80%" height="86%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="24" stdDeviation="26" flood-color="#e6335f" flood-opacity=".24"/>
+    </filter>
+  </defs>
+  <g filter="url(#soft-shadow)">
+    <path
+      d="M319 755V300c0-78 63-142 142-142h151c129 0 227 90 227 210 0 126-98 214-238 214H460"
+      fill="none"
+      stroke="url(#route)"
+      stroke-width="92"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M462 582h120c64 0 117-18 154-53"
+      fill="none"
+      stroke="#ff9b55"
+      stroke-width="42"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      opacity=".96"
+    />
+    <path
+      d="M758 505l79 7-37 70"
+      fill="none"
+      stroke="#ff9b55"
+      stroke-width="42"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <circle cx="319" cy="755" r="74" fill="url(#node)" stroke="#f04a79" stroke-width="40"/>
+    <circle cx="461" cy="158" r="68" fill="url(#node)" stroke="#f04a79" stroke-width="36"/>
+    <circle cx="839" cy="368" r="68" fill="url(#node)" stroke="#e6335f" stroke-width="36"/>
+    <circle cx="602" cy="582" r="56" fill="#fff7f9" stroke="#ff9b55" stroke-width="32"/>
+  </g>
+</svg>

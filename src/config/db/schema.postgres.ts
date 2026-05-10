@@ -507,6 +507,42 @@ export const aiTask = table(
   ]
 );
 
+export const n8nWorkflow = table(
+  'n8n_workflow',
+  {
+    id: text('id').primaryKey(),
+    userId: text('user_id')
+      .notNull()
+      .references(() => user.id, { onDelete: 'cascade' }),
+    title: text('title').notNull().default(''),
+    description: text('description').notNull(),
+    trigger: text('trigger').notNull().default('auto'),
+    tone: text('tone').notNull().default('general'),
+    complexity: text('complexity').notNull().default('standard'),
+    integrations: text('integrations'),
+    input: text('input'),
+    workflow: text('workflow').notNull(),
+    summary: text('summary'),
+    assumptions: text('assumptions'),
+    missingCredentials: text('missing_credentials'),
+    setup: text('setup'),
+    testPlan: text('test_plan'),
+    warnings: text('warnings'),
+    costCredits: integer('cost_credits').notNull().default(0),
+    creditId: text('credit_id'),
+    status: text('status').notNull().default('created'),
+    createdAt: timestamp('created_at').defaultNow().notNull(),
+    updatedAt: timestamp('updated_at')
+      .$onUpdate(() => /* @__PURE__ */ new Date())
+      .notNull(),
+    deletedAt: timestamp('deleted_at'),
+  },
+  (table) => [
+    index('idx_n8n_workflow_user_created').on(table.userId, table.createdAt),
+    index('idx_n8n_workflow_user_status').on(table.userId, table.status),
+  ]
+);
+
 export const chat = table(
   'chat',
   {

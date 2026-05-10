@@ -148,7 +148,7 @@ export default async function RootLayout({
       </head>
       <body suppressHydrationWarning className="overflow-x-hidden">
         <NextTopLoader
-          color="#6466F1"
+          color="#EA4B71"
           initialPosition={0.08}
           crawlSpeed={200}
           height={3}

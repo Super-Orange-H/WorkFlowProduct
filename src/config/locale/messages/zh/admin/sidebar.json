@@ -1,10 +1,10 @@
 {
   "header": {
     "brand": {
-      "title": "ShipAny Two",
+      "title": "WorkflowPilot AI",
       "logo": {
-        "src": "/logo.png",
-        "alt": "ShipAny Two"
+        "src": "/logo-workflowpilot.png",
+        "alt": "WorkflowPilot AI"
       },
       "url": "/admin"
     },

@@ -1,0 +1,127 @@
+{
+  "metadata": {
+    "title": "AI n8n 工作流生成器",
+    "description": "把自然语言自动化需求转换成可导入 n8n 的工作流 JSON。"
+  },
+  "page": {
+    "title": "自然语言生成 n8n 工作流 JSON",
+    "highlight": "n8n 工作流",
+    "description": "输入你想实现的自动化，AI 会设计触发器、节点、分支、配置说明，并生成可导入 n8n 的 workflow JSON。",
+    "tip": "面向创业者、运营、市场和客服团队，不需要从零手动连接每一个节点。",
+    "primaryButton": "生成工作流",
+    "secondaryButton": "n8n 导入文档"
+  },
+  "generator": {
+    "title": "n8n 工作流生成器",
+    "form": {
+      "title": "工作流需求",
+      "description": "自动化描述",
+      "descriptionPlaceholder": "例如：当 Typeform 收到包含姓名、邮箱、公司和预算的新线索时，判断客户意向，保存到 Google Sheets；如果是高意向客户，通知 Slack，并自动发送一封跟进邮件。",
+      "examplesLabel": "示例场景",
+      "trigger": "触发方式",
+      "complexity": "构建等级",
+      "tone": "业务场景",
+      "integrations": "要连接的工具",
+      "integrationsPlaceholder": "例如：Slack、Google Sheets、Gmail、Webhook",
+      "integrationsHelp": "填写这个工作流需要连接的应用、数据库、表单、API 或通知渠道；如果你已经在描述里说清楚，也可以留空让 AI 判断。",
+      "schedule": "执行时间",
+      "schedulePlaceholder": "每个工作日 9:00，或留空",
+      "dataShape": "输入字段",
+      "dataShapePlaceholder": "姓名、邮箱、公司、预算、留言...",
+      "timezone": "时区",
+      "errorHandling": "错误处理",
+      "stickyNotes": "说明节点",
+      "generate": "生成可导入 JSON",
+      "generateWithCredits": "生成工作流（{credits} 积分）",
+      "signInToGenerate": "登录并生成工作流",
+      "generating": "正在生成工作流"
+    },
+    "status": {
+      "fast": {
+        "title": "一句话生成完整方案",
+        "description": "包含 JSON、配置说明、凭证清单和测试计划。"
+      },
+      "credits": {
+        "signedOut": "每次生成消耗 {cost} 积分",
+        "signedIn": "剩余 {credits} 积分 · 每次 {cost} 积分",
+        "description": "登录后可保存历史并管理用量。",
+        "insufficient": "当前积分不足以进行下次生成了哦！",
+        "topUp": "充值"
+      },
+      "safe": {
+        "title": "凭证安全",
+        "description": "生成的工作流不会写入密钥。"
+      }
+    },
+    "options": {
+      "trigger": {
+        "auto": "自动判断",
+        "manual": "手动触发",
+        "webhook": "Webhook",
+        "schedule": "定时任务",
+        "form": "表单",
+        "email": "邮件",
+        "appEvent": "应用事件"
+      },
+      "complexity": {
+        "simple": "简单",
+        "standard": "标准",
+        "production": "生产级"
+      },
+      "tone": {
+        "general": "通用",
+        "business": "业务",
+        "ops": "运营",
+        "marketing": "市场",
+        "support": "客服",
+        "technical": "技术"
+      }
+    },
+    "examples": {
+      "lead": {
+        "title": "CRM 客户同步",
+        "prompt": "监听 CRM 系统新增客户，自动抓取客户名称、联系方式、来源、跟进状态，同步至内部台账表格。"
+      },
+      "support": {
+        "title": "投诉优先级判断",
+        "prompt": "接收外部渠道客户留言数据，AI 智能判断留言内容，对高优先级投诉消息即时推送人工处理。"
+      },
+      "content": {
+        "title": "合同到期提醒",
+        "prompt": "读取在线合同表格，每日早上 8 点自动遍历表格，筛选出 7 天内即将到期的合同，并推送至负责人。"
+      }
+    },
+    "result": {
+      "title": "生成结果",
+      "empty": "生成后的工作流 JSON、配置步骤、凭证清单和测试计划会显示在这里。",
+      "copy": "复制 JSON",
+      "download": "下载 JSON",
+      "warnings": "注意事项",
+      "setup": "配置步骤",
+      "assumptions": "生成假设",
+      "credentials": "需要连接的凭证",
+      "testPlan": "测试计划",
+      "noSetup": "未返回配置步骤。",
+      "noAssumptions": "未返回生成假设。",
+      "noCredentials": "未发现外部凭证需求。",
+      "noTestPlan": "未返回测试计划。",
+      "tabs": {
+        "setup": "配置",
+        "credentials": "凭证",
+        "test": "测试",
+        "json": "JSON"
+      }
+    },
+    "history": {
+      "title": "最近生成",
+      "empty": "生成后的工作流会保存在这里。"
+    },
+    "toast": {
+      "success": "工作流已生成。",
+      "error": "生成失败。",
+      "copied": "工作流 JSON 已复制。",
+      "loaded": "已载入工作流。",
+      "insufficientCredits": "积分不足，请充值后继续生成。"
+    }
+  }
+}

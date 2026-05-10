@@ -1,19 +1,14 @@
-# ShipAny Template Two
+# WorkflowPilot AI
 
-## Getting Started
+WorkflowPilot AI turns natural-language automation ideas into import-ready n8n workflow JSON.
 
-read [ShipAny Document](https://shipany.ai/docs/quick-start) to start your AI SaaS project.
+The product focuses on one core workflow: describe the automation you want, generate an n8n package, review setup notes and credential requirements, then import the JSON into n8n.
 
-## Buy Templates
+## Development
 
-check [ShipAny Templates](https://shipany.ai/templates) to buy Business Templates.
+```bash
+pnpm install
+pnpm dev
+```
 
-## Feedback
-
-submit your feedbacks on [Github Issues](https://github.com/shipanyai/shipany-template-two/issues)
-
-## LICENSE
-
-!!! Please do not publicly release ShipAny's Code. Illegal use will be prosecuted
-
-[ShipAny LICENSE](./LICENSE)
+Open `http://localhost:3000` to use the generator on the homepage.

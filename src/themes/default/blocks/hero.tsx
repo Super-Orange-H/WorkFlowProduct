@@ -3,6 +3,7 @@ import { ArrowRight } from 'lucide-react';
 
 import { Link } from '@/core/i18n/navigation';
 import { SmartIcon } from '@/shared/blocks/common';
+import { N8nWorkflowGenerator } from '@/shared/blocks/generator';
 import { Button } from '@/shared/components/ui/button';
 import { Highlighter } from '@/shared/components/ui/highlighter';
 import { cn } from '@/shared/lib/utils';
@@ -27,11 +28,27 @@ export function Hero({
     <section
       id={section.id}
       className={cn(
-        `pt-24 pb-8 md:pt-36 md:pb-8`,
+        `relative isolate overflow-hidden pt-24 pb-8 md:pt-36 md:pb-8`,
         section.className,
         className
       )}
     >
+      <div
+        aria-hidden
+        className="absolute inset-0 -z-20 bg-[#fbf7f8] dark:bg-[#040506]"
+      />
+      <div
+        aria-hidden
+        className="absolute inset-0 -z-20 opacity-70 [background-image:linear-gradient(rgba(234,75,113,0.12)_1px,transparent_1px),linear-gradient(90deg,rgba(234,75,113,0.12)_1px,transparent_1px)] [background-size:56px_56px] [mask-image:linear-gradient(to_bottom,black_0%,black_58%,transparent_100%)] dark:opacity-25"
+      />
+      <div
+        aria-hidden
+        className="absolute inset-0 -z-20 opacity-55 [background-image:radial-gradient(rgba(234,75,113,0.55)_1px,transparent_1.5px)] [background-size:28px_28px] [mask-image:linear-gradient(to_bottom,black_0%,transparent_68%)] dark:opacity-25"
+      />
+      <div
+        aria-hidden
+        className="absolute inset-x-0 top-0 -z-20 h-[620px] bg-[linear-gradient(to_bottom,rgba(234,75,113,0.1),rgba(255,255,255,0)_58%)] dark:bg-[linear-gradient(to_bottom,rgba(234,75,113,0.18),rgba(4,5,6,0)_62%)]"
+      />
       {section.announcement && (
         <Link
           href={section.announcement.url || ''}
@@ -106,6 +123,13 @@ export function Hero({
           <SocialAvatars tip={section.avatars_tip || ''} />
         )}
       </div>
+
+      {section.n8n_workflow_generator?.enabled && (
+        <N8nWorkflowGenerator
+          srOnlyTitle={section.n8n_workflow_generator.title || section.title}
+          className="pt-10 pb-0 md:pt-12"
+        />
+      )}
 
       {(section.image?.src || section.image_invert?.src) && (
         <div className="border-foreground/10 relative mt-8 border-y sm:mt-16">
